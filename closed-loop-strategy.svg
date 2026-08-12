@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760" font-family="'Helvetica Neue', Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="66" text-anchor="middle" fill="#f8fafc" font-size="38" font-weight="700">Closed-Loop 전략</text>
+  <text x="500" y="98" text-anchor="middle" fill="#94a3b8" font-size="18">피드백으로 스스로를 교정하는 폐루프 실행 사이클</text>
+
+  <!-- Center hub -->
+  <circle cx="500" cy="410" r="92" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="500" y="400" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700">전략 목표</text>
+  <text x="500" y="430" text-anchor="middle" fill="#64748b" font-size="15">Strategic Goal</text>
+
+  <!-- Loop guide circle -->
+  <circle cx="500" cy="410" r="230" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.6"/>
+
+  <!-- Curved feedback arrows along the loop (clockwise) -->
+  <g fill="none" stroke="#94a3b8" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M 640 250 A 230 230 0 0 1 700 470"/>
+    <path d="M 660 560 A 230 230 0 0 1 400 630"/>
+    <path d="M 300 560 A 230 230 0 0 1 300 250"/>
+    <path d="M 360 200 A 230 230 0 0 1 600 195"/>
+  </g>
+
+  <!-- Node: 계획 (top) -->
+  <g filter="url(#soft)">
+    <rect x="400" y="150" width="200" height="86" rx="16" fill="#2563eb"/>
+  </g>
+  <text x="500" y="188" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">① 계획</text>
+  <text x="500" y="214" text-anchor="middle" fill="#dbeafe" font-size="14">가설·목표 설정 (Plan)</text>
+
+  <!-- Node: 실행 (right) -->
+  <g filter="url(#soft)">
+    <rect x="700" y="360" width="200" height="86" rx="16" fill="#0891b2"/>
+  </g>
+  <text x="800" y="398" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">② 실행</text>
+  <text x="800" y="424" text-anchor="middle" fill="#cffafe" font-size="14">전략 실행 (Do)</text>
+
+  <!-- Node: 측정 (bottom) -->
+  <g filter="url(#soft)">
+    <rect x="400" y="584" width="200" height="86" rx="16" fill="#059669"/>
+  </g>
+  <text x="500" y="622" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">③ 측정</text>
+  <text x="500" y="648" text-anchor="middle" fill="#d1fae5" font-size="14">데이터 수집 (Measure)</text>
+
+  <!-- Node: 분석·개선 (left) -->
+  <g filter="url(#soft)">
+    <rect x="100" y="360" width="200" height="86" rx="16" fill="#7c3aed"/>
+  </g>
+  <text x="200" y="392" text-anchor="middle" fill="#fff" font-size="21" font-weight="700">④ 분석·개선</text>
+  <text x="200" y="418" text-anchor="middle" fill="#ede9fe" font-size="14">피드백 반영 (Adjust)</text>
+
+  <!-- Feedback annotation into hub -->
+  <path d="M 300 403 L 405 410" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+  <text x="352" y="393" text-anchor="middle" fill="#a78bfa" font-size="12">피드백</text>
+
+  <!-- Footer note -->
+  <text x="500" y="726" text-anchor="middle" fill="#64748b" font-size="14">각 단계의 결과가 다시 목표로 되돌아가 전략을 지속적으로 교정합니다 — 열린 루프와 달리 결과가 입력을 바꿉니다.</text>
+</svg>
