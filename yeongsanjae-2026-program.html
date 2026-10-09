@@ -106,10 +106,18 @@ body { background: var(--paper); color: var(--ink); font-family: var(--f-body); 
   .item h3 { font-size: 20px; }
   .bar a { font-size: 11px; }
 }
+@page { size: A4; margin: 14mm 0; }
 @media print {
   :root { --paper: #fff; }
-  .wrap { padding-block: 0; }
-  .item { break-inside: avoid; }
+  body { font-size: 10.5pt; line-height: 1.7; }
+  .wrap { max-width: 178mm; padding-block: 0; }
+  .cover { padding-block: 28px 20px; gap: 12px; }
+  .flow { margin-block: 4px 24px; }
+  .item { padding-block: 16px; break-inside: avoid; }
+  .program > h2, .credits h2 { break-after: avoid; }
+  .credits, .closing { break-inside: avoid; }
+  .credits { padding-block: 20px 4px; }
+  .closing { padding-top: 20px; }
 }
 </style>
 
